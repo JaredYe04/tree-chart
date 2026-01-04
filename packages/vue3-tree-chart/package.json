@@ -3,6 +3,11 @@
   "author": "ssthouse",
   "version": "0.3.0",
   "description": "Tree Component for Vue3 powered by D3.js & SVG",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JaredYe04/tree-chart.git",
+    "directory": "packages/vue3-tree-chart"
+  },
   "scripts": {
     "serve": "cross-env NODE_OPTIONS=--openssl-legacy-provider vue-cli-service serve",
     "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider vue-cli-service build",
@@ -10,8 +15,8 @@
     "release": "npm run build:component && ../../scripts/publish-safe.sh",
     "build:component": "cross-env NODE_OPTIONS=--openssl-legacy-provider vue-cli-service build --target lib --name vue3-tree-chart src/vue-tree/index.js"
   },
-  "main": "src/vue-tree/index.js",
-  "module": "src/vue-tree/index.js",
+  "main": "dist/vue3-tree-chart.umd.js",
+  "module": "dist/vue3-tree-chart.common.js",
   "types": "src/vue-tree/index.js",
   "exports": {
     ".": {
