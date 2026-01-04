@@ -5,6 +5,10 @@
 	"main": "index.js",
 	"author": "ssthouse",
 	"license": "ISC",
+	"scripts": {
+		"dev": "webpack-dev-server --config build/webpack.config.dev.js",
+		"build": "webpack --config build/webpack.config.prod.js"
+	},
 	"dependencies": {
 		"@ssthouse/vue-tree-chart": "^0.5.4",
 		"d3": "^7.1.1",
