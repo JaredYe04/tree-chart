@@ -47,7 +47,10 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.js', '.vue', '.json'],
     alias: {
-      vue$: 'vue/dist/vue.esm.js'
+      vue$: 'vue/dist/vue.esm.js',
+      // 使用本地编译的代码而不是 node_modules 中的包
+      '@ssthouse/tree-chart-core': path.resolve(__dirname, '../../tree-chart-core/build/index.js'),
+      '@ssthouse/vue-tree-chart': path.resolve(__dirname, '../../vue-tree-chart/library/vue-tree-chart.js')
     }
   }
 }

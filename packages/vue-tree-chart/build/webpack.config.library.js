@@ -33,7 +33,8 @@ module.exports = {
         loader: 'ts-loader',
         exclude: /node_modules/,
         options: {
-          appendTsSuffixTo: [/\.vue$/]
+          appendTsSuffixTo: [/\.vue$/],
+          transpileOnly: true
         }
       }
     ]
@@ -42,7 +43,9 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.js', '.vue', '.json'],
     alias: {
-      vue$: 'vue/dist/vue.esm.js'
+      vue$: 'vue/dist/vue.esm.js',
+      // 使用本地编译的 core 而不是 node_modules 中的包
+      '@ssthouse/tree-chart-core': path.resolve(__dirname, '../../tree-chart-core/build/index.js')
     }
   }
 }
