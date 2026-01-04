@@ -11,6 +11,21 @@
     "build:component": "cross-env NODE_OPTIONS=--openssl-legacy-provider vue-cli-service build --target lib --name vue3-tree-chart src/vue-tree/index.js"
   },
   "main": "dist/vue3-tree-chart.umd.js",
+  "module": "dist/vue3-tree-chart.common.js",
+  "types": "src/vue-tree/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue3-tree-chart.common.js",
+      "require": "./dist/vue3-tree-chart.umd.js",
+      "default": "./dist/vue3-tree-chart.umd.js"
+    },
+    "./style": "./dist/vue3-tree-chart.css",
+    "./dist/vue3-tree-chart.css": "./dist/vue3-tree-chart.css"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
   "dependencies": {
     "@ssthouse/tree-chart-core": "^1.2.0"
   },
