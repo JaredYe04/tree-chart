@@ -10,14 +10,14 @@
     "release": "npm run build:component && ../../scripts/publish-safe.sh",
     "build:component": "cross-env NODE_OPTIONS=--openssl-legacy-provider vue-cli-service build --target lib --name vue3-tree-chart src/vue-tree/index.js"
   },
-  "main": "dist/vue3-tree-chart.umd.js",
-  "module": "dist/vue3-tree-chart.common.js",
+  "main": "src/vue-tree/index.js",
+  "module": "src/vue-tree/index.js",
   "types": "src/vue-tree/index.js",
   "exports": {
     ".": {
-      "import": "./dist/vue3-tree-chart.common.js",
+      "import": "./src/vue-tree/index.js",
       "require": "./dist/vue3-tree-chart.umd.js",
-      "default": "./dist/vue3-tree-chart.umd.js"
+      "default": "./src/vue-tree/index.js"
     },
     "./style": "./dist/vue3-tree-chart.css",
     "./dist/vue3-tree-chart.css": "./dist/vue3-tree-chart.css"
